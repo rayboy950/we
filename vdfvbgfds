@@ -1,0 +1,57 @@
+import time
+def choice():
+    Translating = input("---------------------------\nChoose the character you want to change into decimal>> ")
+    try:
+        sadness = ord(Translating)
+    except:
+        print(
+            "---------------------\nInvalid character please restart calculator and try again\n---------------------")
+    else:
+        print("---------------------------\nConverting...")
+        time.sleep(1.5)
+        print("---------------------------\nLoading...")
+        time.sleep(0.5)
+        print("---------------------------\nWe have finished converting >>", "[", sadness, "]")
+        print("\nIf conversion comes out as  just copy and paste into your web browser to see what it is")
+def choice2():
+    Translating2 = input("---------------------------\nChoose the decimal you want to change into character>> ")
+    try:
+        sadness2 = chr(Translating2)
+    except:
+        print("---------------------\nInvalid decimal please restart calculator and try again\n---------------------")
+    else:
+        print("---------------1------------\nConverting...")
+        time.sleep(1.5)
+        print("---------------------------\nLoading...")
+        time.sleep(0.5)
+        print("---------------------------\nWe have finished converting >>", "[", sadness2, "]")
+        print("If conversion comes out as  just copy and paste into your web browser to see what it is ")
+
+
+i = True
+print("---------------------------\nWelcome to cool maths calculator aka as cool maths games! where no maths is involved")
+
+
+print("This calculator translates characters to decimal and decimal to character ")
+
+while i:
+    try:
+        FinalChoice = int(input(
+            "---------------------------\nTo start choose '1' to convert character to decimal or '2' to covert deciaml into character "))
+    except:
+        print("--------------------------\nPlease Restart the program and enter in either 1 or 2 ")
+    else:
+        if FinalChoice == 1:
+            print(choice())
+
+        if FinalChoice == 2:
+            print(choice2())
+
+        Reuse = int(input("----------------------\nDo you want to reuse the calculator?, 1 for yes and 2 for no "))
+
+        if Reuse == 1:
+            i = True
+
+        if Reuse == 2:
+            print("------------------------\nThank you for using raymond's cool math games calculator where no maths is involved of course ")
+            i = False
